@@ -1,71 +1,106 @@
-button {
-    color: red;
-}
- .button {
-    background-color: lightseagreen;
-    height: 3.5rem;
-    width: 10rem;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 2rem;
-    border-radius: 0.25rem;
-    font: 500 1rem 'DM Sans', sans-serif;
-    transition: background 0.3s;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
- }
-h1 {
-    display: inline-block;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #1450c0 50%,#63bc1a 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-span {
-    display: inline-block;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom,#63bc1a 50%,#dceb11 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-body {
-    text-align: center;
-    background-image: url(https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/02/as19-starters-t1-jan24.jpg);
+@keyframes pulse {
+  0%,
+  100% {
+    font-size: 1.5rem;
+    color: white;
+  }
+  50% {
+    font-size: 2rem;
+    color: #069aa5;
+  }
 }
 
- a {
-    text-decoration: none;
- }
- 
-h1 {
-    display: inline-block;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #1450c0 50%,#63bc1a 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-span {
-    display: inline-block;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom,#63bc1a 50%,#dceb11 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
 body {
-    text-align: center;
-    background-image: url(https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/02/as19-starters-t1-jan24.jpg);
+  background: rgb(29, 28, 28);
 }
-
- a {
+#divp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#initial-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+.pulse {
+  animation: pulse 4s infinite ease-in-out;
+  font-family: "Black Ops One", cursive;
+  font-weight: 600;
+}
+#initial-text img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 5rem;
+}
+.insta {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  transition: 0.3s ease;
+}
+.insta:hover {
+  color: #e1306c;
+}
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+#buttons a {
+  display: flex;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  gap: 2rem;
+  background: white;
+  color: #069aa5;
+  align-items: center;
+  width: 30rem;
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+  border: solid 5px #069aa5;
+}
+#buttons a:hover {
+  background: rgb(170, 164, 164);
+  transform: translateY(-8px);
+}
+#buttons img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media (max-width: 767px) {
+  @keyframes pulse {
+    0%,
+    100% {
+      font-size: 1rem;
+      color: white;
+    }
+    50% {
+      font-size: 1.3rem;
+      color: #069aa5;
+    }
+  }
+  .pulse {
+    animation: pulse 4s infinite ease-in-out;
+    font-family: "Black Ops One", cursive;
+    font-weight: 500;
+  }
+  #buttons a {
+    display: flex;
     text-decoration: none;
- }
- 
+    font-family: "Roboto", sans-serif;
+    background: white;
+    color: #069aa5;
+    align-items: center;
+    width: 14rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    border: solid 2px #069aa5;
+  }
+}
